@@ -1,0 +1,128 @@
+:root {
+    background: #FAF9F6;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 0;
+    justify-content: space-around;
+}
+
+li {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li::before {
+    content: '-';
+    margin-right: 10px;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutContainer {
+    width: 800px;
+}
+
+.aboutContainer p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.projectsContainer {
+    width: 50vw;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    background: #474747;
+    border: transparent;
+    border-radius: 1%;
+    height: 450px;
+    width: 350px;
+    margin: 0% 1% 5% 1%;
+}
+
+.card a {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    clip-path: inset(0 13%);
+    border: transparent;
+    border-radius: 1%;
+    width: 125%
+}
+
+.card img:hover {
+    animation: preview 0.5s forwards;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+@keyframes preview {
+    from {clip-path: inset(0 13%);}
+    to {clip-path: inset(0); width: 187.5%;}
+}
+
+.cardDescription {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 12;
+    max-width: 90%;
+}
+
+@media (max-width: 850px) {
+    .aboutContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .aboutContainer {
+        width: 90%;
+    }
+
+    .projectsContainer {
+        width: 90%
+    }
+
+    .card {
+        height: 100vw;
+        width: 75vw;
+    }
+
+    .cardDescription {
+        font-size: 4.5vw;
+    }
+
+    @keyframes preview {
+        from {clip-path: inset(0 13%);}
+        to {clip-path: inset(0); width: 130%;}
+    }
+}
+

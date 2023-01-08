@@ -1,0 +1,25 @@
+h1, h4 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.header {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
